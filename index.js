@@ -35,7 +35,7 @@ function addpage (number) {
 selecturl();
 
 (async () => {
-    const brower = await puppeteer.launch();   
+    const brower = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});   
     const page = await brower.newPage();   
     await page.goto(urls);
 
@@ -47,7 +47,7 @@ selecturl();
          
             const srcs = await page.evaluate( () => {    // 异步加载完毕
                 // 获取图片操作列表
-                const srcs = document.querySelectorAll('#content .row>.text>p>a ');     // 里面可以操作dom的api
+                const srcs = document.querySelectorAll('a.view_img_link');     // 里面可以操作dom的api
                 return Array.from(srcs).map( imgs => imgs.href).filter(e=>{
                     return e!=='javascript:;'
                 })      // 拿到每张图片的src并删除无效的src

@@ -12,6 +12,12 @@
 `先修改当前文件夹里的db文件,把数据库换成自己地址`
 ```
 npm i  --registry=https://registry.npm.taobao.org
+//or
+cnpm i
 
 npm start
-```
+```v
+
+# 问题
+-- window环境下npm 安装即可 liunx 安装下...请看 https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+
