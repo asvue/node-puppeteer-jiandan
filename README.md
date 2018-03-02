@@ -19,5 +19,5 @@ npm start
 ```v
 
 # 问题
--- window环境下npm 安装即可 liunx 安装下...请看 https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
+-- window环境下npm 安装即可 liunx 安装...请看 https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
 

@@ -37,7 +37,7 @@ selecturl();
 (async () => {
     const brower = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});   
     const page = await brower.newPage();   
-    await page.goto(urls);
+    await page.goto(urls,{timeout:0});
 
     // await page.click("#gif-click-load-off")           // 模拟用户点击事件
 
